@@ -2,7 +2,7 @@
 
 Hey! If you're reading this, you've probably signed up for my workshop at Strangeloop. Nice.
 
-You **don't** need to clone this repository for the workshop, but this README contains the instructions and the reference "solutions". Because the exercises are fairly open-ended, don't take the solutions too seriously.
+You **don't** need to clone this repository for the workshop, but this README contains the instructions and the reference solutions.
 
 # Setup
 
@@ -57,7 +57,14 @@ In this exercise you'll also want to make use of the developer tools. Try the fo
 
 # Part 3: Cross-platform and Platform-Specific Code
 
+- [ ] Make a component that renders different on iOS and Android (different background colors, perhaps?)
+- [ ] Using the CutePhotos example as a guide, implement multiple screens in the Weather app, using the appropriate components for iOS and Android, respectively
+- [ ] Update your app to make the multiple screens actually useful! Display weather forecasts for the previous 5 locations
+
 # Bonus exercises
 
-_TODO_
+- [ ] Use the geolocation API to display weather based on the user's current location
+- [ ] Provide settings to toggle between Fahrenheit and Celsius
+- [ ] Add some animations
+
 
