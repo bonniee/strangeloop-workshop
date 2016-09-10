@@ -24,10 +24,10 @@ We're going to focus now on using some basic mobile components from React Native
 
 You'll notice the following attributes:
 
-- Background image
-- Input field
-- Current temperature
-- Location
+- [ ] Background image
+- [ ] Input field
+- [ ] Current temperature
+- [ ] Location
 
 Try and replicate this in your app, using the above components, as well as appropriate styles. Refer to the docs as necessary.
 
@@ -37,23 +37,23 @@ Try and replicate this in your app, using the above components, as well as appro
 
 In this exercise you'll also want to make use of the developer tools. Try the following:
 
-- Open the developer menu from your emulator (iOS or Android)
-- Turn on auto reload and try making some style changes - see what happens!
-- Add a `debugger` statement and open the Chrome developer tools
-- Add a `console.log` statement and view the logged message in the Chrome developer tools (check out the [docs](https://facebook.github.io/react-native/docs/debugging.html) for more ways to view log statements, e.g. `adb logcat` or from Xcode)
+- [ ] Open the developer menu from your emulator (iOS or Android)
+- [ ] Turn on auto reload and try making some style changes - see what happens!
+- [ ] Add a `debugger` statement and open the Chrome developer tools
+- [ ] Add a `console.log` statement and view the logged message in the Chrome developer tools (check out the [docs](https://facebook.github.io/react-native/docs/debugging.html) for more ways to view log statements, e.g. `adb logcat` or from Xcode)
 
 ## Touch events
 
-- Make the TextInput interactive!
+- [ ] Make the TextInput interactive! Update the displayed zip code when the user enters text.
 
 ## Fetch
 
-- Use the OpenWeatherMaps API to fetch the weather forecast & update the displayed text accordingly
+- [ ] Use the OpenWeatherMaps API to fetch the weather forecast & update the displayed text accordingly
 
 ## Local storage
 
-- When the user inputs a new zip code, save it to local storage
-- When the app starts, load the previous location from local storage, if available
+- [ ] When the user inputs a new zip code, save it to local storage
+- [ ] When the app starts, load the previous location from local storage, if available
 
 # Part 3: Cross-platform and Platform-Specific Code
 
