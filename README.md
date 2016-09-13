@@ -14,7 +14,7 @@ Follow the setup instructions from the [official docs](https://facebook.github.i
 
 Here's a screenshot of what the Mondrian app should end up looking like:
 
-<img src="part1/mondrian.png"/>
+<img src="part1/mondrian.png" width="200px"/>
 
 Using flexbox and `<View>` components, try and replicate this in your own application! Remember, you can create a new React Native app with `react-native init APPNAME`.
 
