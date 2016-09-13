@@ -14,7 +14,7 @@ Follow the setup instructions from the [official docs](https://facebook.github.i
 
 Here's a screenshot of what the Mondrian app should end up looking like:
 
-_TODO: add screenshot_
+<img src="part1/mondrian.png"/>
 
 Using flexbox and `<View>` components, try and replicate this in your own application! Remember, you can create a new React Native app with `react-native init APPNAME`.
 
@@ -57,8 +57,13 @@ In this exercise you'll also want to make use of the developer tools. Try the fo
 
 # Part 3: Cross-platform and Platform-Specific Code
 
-- [ ] Make a component that renders different on iOS and Android (different background colors, perhaps?)
+## iOS- and Android-specific code
+
+- [ ] Make a component that renders differently on iOS and Android (different background colors, perhaps?)
 - [ ] Using the CutePhotos example as a guide, implement multiple screens in the Weather app, using the appropriate components for iOS and Android, respectively
+
+## Update the weather app
+
 - [ ] Update your app to make the multiple screens actually useful! Display weather forecasts for the previous 5 locations
 
 # Bonus exercises
