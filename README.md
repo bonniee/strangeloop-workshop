@@ -27,8 +27,8 @@ Next, we're going to focus now on using some basic mobile components from React 
 You'll notice the following attributes:
 
 - [ ] Background image
-- [ ] Input field
 - [ ] Current temperature
+- [ ] Description of current weather
 - [ ] Location
 
 Try and replicate this in your app, using the above components, as well as appropriate styles. Refer to the docs as necessary.
