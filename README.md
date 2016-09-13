@@ -14,13 +14,15 @@ Follow the setup instructions from the [official docs](https://facebook.github.i
 
 Let's start with some styling practice! Here's a screenshot of what the Mondrian app should end up looking like:
 
-<img src="part1/mondrian.png" width="200px"/>
+<img src="part1/mondrian.png" width="250px"/>
 
 Using flexbox and `<View>` components, try and replicate this in your own application. Remember, you can create a new React Native app with `react-native init APPNAME`.
 
 ## Weather app: mockup edition
 
 Next, we're going to focus now on using some basic mobile components from React Native: `<View>`, `<Text>`, `<Image>`, and `<TextInput>`. Here's what my version of the Weather app looks like:
+
+<img src="part1/weather-mock.png" width="250px"/>
 
 You'll notice the following attributes:
 
