@@ -23,7 +23,7 @@ Then, build & run the iOS and/or Android applications.
 
 Let's start with some styling practice! Here's a screenshot of what the Mondrian app should end up looking like:
 
-<img src="part1/mondrian.png" width="250px"/>
+<img src="https://github.com/bonniee/strangeloop-workshop/blob/master/part1/mondrian.png?raw=true" width="250px"/>
 
 Using flexbox and `<View>` components, try and replicate this in your own application.
 
@@ -31,7 +31,7 @@ Using flexbox and `<View>` components, try and replicate this in your own applic
 
 Next, we're going to focus now on using some basic mobile components from React Native: `<View>`, `<Text>`, `<Image>`, and `<TextInput>`. Here's what my version of the Weather app looks like:
 
-<img src="part1/weather-mock.png" width="250px"/>
+<img src="https://github.com/bonniee/strangeloop-workshop/blob/master/part1/weather-mock.png?raw=true" width="250px"/>
 
 You'll notice the following attributes:
 
@@ -65,6 +65,10 @@ In this exercise you'll also want to make use of the developer tools. Try the fo
 
 - When the user inputs a new zip code, save it to local storage
 - When the app starts, load the previous location from local storage, if available
+
+Once you've completed the above tasks, you should be able to display actual forecast data!
+
+<img src="https://github.com/bonniee/strangeloop-workshop/blob/master/part2/weather-edit.png?raw=true" width="250px"/>
 
 # Part 3: Cross-platform and Platform-Specific Code
 
