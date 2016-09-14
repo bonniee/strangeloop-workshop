@@ -99,18 +99,68 @@
 <a id="touch-events" class="anchor" href="#touch-events" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Touch events</h2>
 
 <ul>
-<li>Make the TextInput interactive! Update the displayed zip code when the user enters text.</li>
+<li>Add a <code>&lt;TextInput&gt;</code> component, and update the displayed zip code when the user enters text</li>
+<li>Use a number pad for input, instead of a QWERTY keyboard</li>
 </ul>
 
 <h2>
 <a id="fetch" class="anchor" href="#fetch" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fetch</h2>
 
+<p>Let's learn to use the Fetch API! <code>fetch(url)</code> is a simple API that returns a Promise.</p>
+
+<pre><code>fetch(url)
+  .then((response) =&gt; response.json())
+  .then((responseJSON) =&gt; {
+    console.log(responseJSON);
+  })
+  .catch((error) =&gt; {
+    console.warn(error);
+  });
+</code></pre>
+
+<p>The OpenWeatherMap API for fetching a given zip code's weather looks like this:</p>
+
+<pre><code>`http://api.openweathermap.org/data/2.5/
+  weather?q=${zipCode}&amp;units=imperial&amp;APPID=${API_KEY}`
+</code></pre>
+
+<p>Feel free to use the following API key:</p>
+
+<pre><code>bbeb34ebf60ad50f7893e7440a1e2b0b
+</code></pre>
+
+<p>Now let's actually make use of the Fetch API in your app.</p>
+
 <ul>
-<li>Use the OpenWeatherMaps API to fetch the weather forecast &amp; update the displayed text accordingly</li>
+<li>Use the OpenWeatherMap API to fetch the weather forecast &amp; update the displayed text accordingly</li>
 </ul>
 
 <h2>
-<a id="local-storage" class="anchor" href="#local-storage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Local storage</h2>
+<a id="asyncstorage" class="anchor" href="#asyncstorage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>AsyncStorage</h2>
+
+<p>The AsyncStorage API provides a simple key/value store for your application to use. It provides <code>getItem</code> and <code>setItem</code> methods, which return Promises:</p>
+
+<pre><code>AsyncStorage.getItem(STORAGE_KEY)
+  .then((value) =&gt; {
+    console.log(value);
+  })
+  .catch((error) =&gt; console.log('AsyncStorage error: ' + error.message))
+  .done();
+</code></pre>
+
+<pre><code>AsyncStorage.setItem(STORAGE_KEY, item)
+  .then(() =&gt; console.log('Saved item to disk'))
+  .catch((error) =&gt; console.log('AsyncStorage error: ' + error.message))
+  .done();
+</code></pre>
+
+<p>Under the hood, the docs tell us that AsyncStorage's implementation varies by platform:</p>
+
+<blockquote>
+<p>On iOS, AsyncStorage is backed by native code that stores small values in a serialized dictionary and larger values in separate files. On Android, AsyncStorage will use either RocksDB or SQLite based on what is available.</p>
+</blockquote>
+
+<p>Now let's update your application again:</p>
 
 <ul>
 <li>When the user inputs a new zip code, save it to local storage</li>
