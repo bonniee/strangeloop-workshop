@@ -76,7 +76,8 @@ fetch(url)
 The OpenWeatherMap API for fetching a given zip code's weather looks like this:
 
 ```
-`http://api.openweathermap.org/data/2.5/weather?q=${zipCode}&units=imperial&APPID=${API_KEY}`
+`http://api.openweathermap.org/data/2.5/
+  weather?q=${zipCode}&units=imperial&APPID=${API_KEY}`
 ```
 
 Feel free to use the following API key:
