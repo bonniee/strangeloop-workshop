@@ -55,13 +55,65 @@ In this exercise you'll also want to make use of the developer tools. Try the fo
 
 ## Touch events
 
-- Make the TextInput interactive! Update the displayed zip code when the user enters text.
+- Add a `<TextInput>` component, and update the displayed zip code when the user enters text
+- Use a number pad for input, instead of a QWERTY keyboard
 
 ## Fetch
 
-- Use the OpenWeatherMaps API to fetch the weather forecast & update the displayed text accordingly
+Let's learn to use the Fetch API! `fetch(url)` is a simple API that returns a Promise.
 
-## Local storage
+```
+fetch(url)
+  .then((response) => response.json())
+  .then((responseJSON) => {
+    console.log(responseJSON);
+  })
+  .catch((error) => {
+    console.warn(error);
+  });
+```
+
+The OpenWeatherMap API for fetching a given zip code's weather looks like this:
+
+```
+`http://api.openweathermap.org/data/2.5/weather?q=${zipCode}&units=imperial&APPID=${API_KEY}`
+```
+
+Feel free to use the following API key:
+
+```
+bbeb34ebf60ad50f7893e7440a1e2b0b
+```
+
+Now let's actually make use of the Fetch API in your app.
+
+- Use the OpenWeatherMap API to fetch the weather forecast & update the displayed text accordingly
+
+## AsyncStorage
+
+The AsyncStorage API provides a simple key/value store for your application to use. It provides `getItem` and `setItem` methods, which return Promises:
+
+```
+AsyncStorage.getItem(STORAGE_KEY)
+  .then((value) => {
+    console.log(value);
+  })
+  .catch((error) => console.log('AsyncStorage error: ' + error.message))
+  .done();
+```
+
+```
+AsyncStorage.setItem(STORAGE_KEY, item)
+  .then(() => console.log('Saved item to disk'))
+  .catch((error) => console.log('AsyncStorage error: ' + error.message))
+  .done();
+```
+
+Under the hood, the docs tell us that AsyncStorage's implementation varies by platform:
+
+> On iOS, AsyncStorage is backed by native code that stores small values in a serialized dictionary and larger values in separate files. On Android, AsyncStorage will use either RocksDB or SQLite based on what is available.
+
+Now let's update your application again:
 
 - When the user inputs a new zip code, save it to local storage
 - When the app starts, load the previous location from local storage, if available
