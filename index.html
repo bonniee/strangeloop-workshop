@@ -1,35 +1,57 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>Strangeloop React Native Workshop by bonniee</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>React Native Workshop by bonniee</title>
   </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Strangeloop React Native Workshop</h1>
-      <h2 class="project-tagline">by @brindelle</h2>
-      <a href="https://github.com/bonniee/strangeloop-workshop" class="btn">View on GitHub</a>
-      <a href="https://github.com/bonniee/strangeloop-workshop/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/bonniee/strangeloop-workshop/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
 
-    <section class="main-content">
-      <h1>
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>React Native Workshop</h1>
+          <h2>by @brindelle</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/bonniee/strangeloop-workshop/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/bonniee/strangeloop-workshop/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/bonniee/strangeloop-workshop" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
 <a id="welcome" class="anchor" href="#welcome" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome!</h1>
 
-<p>Hey! If you're reading this, you've probably signed up for my workshop at Strangeloop. Nice.</p>
-
-<p>You <strong>don't</strong> need to clone this repository for the workshop, but this README contains the instructions and the reference solutions.</p>
+<p>Hey! If you're reading this, you've probably signed up for my workshop at Strangeloop. Nice. You <strong>don't</strong> need to clone this repository for the workshop; just follow the instructions below.</p>
 
 <h1>
 <a id="setup" class="anchor" href="#setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setup</h1>
 
 <p>Follow the setup instructions from the <a href="https://facebook.github.io/react-native/releases/next/docs/getting-started.html">official docs</a>.</p>
+
+<p>Check if your setup is working by running by generating a new project:</p>
+
+<pre><code>react-native init Weather
+</code></pre>
+
+<p>Then, build &amp; run the iOS and/or Android applications.</p>
+
+<ul>
+<li>For iOS, you can open <code>ios/Weather.xcodeproj</code> in Xcode in order to build it and launch the simulator.</li>
+<li>For Android, you should first launch an Android emulator from <code>android avd</code>, then build and run your application using <code>react-native run-android</code>.</li>
+</ul>
 
 <h1>
 <a id="part-1-components--styling" class="anchor" href="#part-1-components--styling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 1: Components + Styling</h1>
@@ -41,7 +63,7 @@
 
 <p><img src="part1/mondrian.png" width="250px"></p>
 
-<p>Using flexbox and <code>&lt;View&gt;</code> components, try and replicate this in your own application. Remember, you can create a new React Native app with <code>react-native init APPNAME</code>.</p>
+<p>Using flexbox and <code>&lt;View&gt;</code> components, try and replicate this in your own application.</p>
 
 <h2>
 <a id="weather-app-mockup-edition" class="anchor" href="#weather-app-mockup-edition" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Weather app: mockup edition</h2>
@@ -53,10 +75,10 @@
 <p>You'll notice the following attributes:</p>
 
 <ul>
-<li>[ ] Background image</li>
-<li>[ ] Current temperature</li>
-<li>[ ] Description of current weather</li>
-<li>[ ] Location</li>
+<li>Background image</li>
+<li>Current temperature</li>
+<li>Description of current weather</li>
+<li>Location</li>
 </ul>
 
 <p>Try and replicate this in your app, using the above components, as well as appropriate styles. Refer to the docs as necessary.</p>
@@ -70,32 +92,32 @@
 <p>In this exercise you'll also want to make use of the developer tools. Try the following:</p>
 
 <ul>
-<li>[ ] Open the developer menu from your emulator (iOS or Android)</li>
-<li>[ ] Turn on auto reload and try making some style changes - see what happens!</li>
-<li>[ ] Add a <code>debugger</code> statement and open the Chrome developer tools</li>
-<li>[ ] Add a <code>console.log</code> statement and view the logged message in the Chrome developer tools (check out the <a href="https://facebook.github.io/react-native/docs/debugging.html">docs</a> for more ways to view log statements, e.g. <code>adb logcat</code> or from Xcode)</li>
+<li>Open the developer menu from your emulator (iOS or Android)</li>
+<li>Turn on auto reload and try making some style changes - see what happens!</li>
+<li>Add a <code>debugger</code> statement and open the Chrome developer tools</li>
+<li>Add a <code>console.log</code> statement and view the logged message in the Chrome developer tools (check out the <a href="https://facebook.github.io/react-native/docs/debugging.html">docs</a> for more ways to view log statements, e.g. <code>adb logcat</code> or from Xcode)</li>
 </ul>
 
 <h2>
 <a id="touch-events" class="anchor" href="#touch-events" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Touch events</h2>
 
 <ul>
-<li>[ ] Make the TextInput interactive! Update the displayed zip code when the user enters text.</li>
+<li>Make the TextInput interactive! Update the displayed zip code when the user enters text.</li>
 </ul>
 
 <h2>
 <a id="fetch" class="anchor" href="#fetch" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fetch</h2>
 
 <ul>
-<li>[ ] Use the OpenWeatherMaps API to fetch the weather forecast &amp; update the displayed text accordingly</li>
+<li>Use the OpenWeatherMaps API to fetch the weather forecast &amp; update the displayed text accordingly</li>
 </ul>
 
 <h2>
 <a id="local-storage" class="anchor" href="#local-storage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Local storage</h2>
 
 <ul>
-<li>[ ] When the user inputs a new zip code, save it to local storage</li>
-<li>[ ] When the app starts, load the previous location from local storage, if available</li>
+<li>When the user inputs a new zip code, save it to local storage</li>
+<li>When the app starts, load the previous location from local storage, if available</li>
 </ul>
 
 <h1>
@@ -105,34 +127,34 @@
 <a id="ios--and-android-specific-code" class="anchor" href="#ios--and-android-specific-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>iOS- and Android-specific code</h2>
 
 <ul>
-<li>[ ] Make a component that renders differently on iOS and Android (different background colors, perhaps?)</li>
-<li>[ ] Using the CutePhotos example as a guide, implement multiple screens in the Weather app, using the appropriate components for iOS and Android, respectively</li>
+<li>Make a component that renders differently on iOS and Android (different background colors, perhaps?)</li>
+<li>Using the <a href="https://github.com/bonniee/strangeloop-workshop/tree/master/part3/CutePhotos">CutePhotos example</a> as a guide, implement multiple screens in the Weather app, using the appropriate components for iOS and Android, respectively</li>
 </ul>
 
 <h2>
 <a id="update-the-weather-app" class="anchor" href="#update-the-weather-app" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Update the weather app</h2>
 
 <ul>
-<li>[ ] Update your app to make the multiple screens actually useful! Display weather forecasts for the previous 5 locations</li>
+<li>Update your app to make the multiple screens actually useful! Display weather forecasts for the previous 5 locations</li>
 </ul>
 
 <h1>
 <a id="bonus-exercises" class="anchor" href="#bonus-exercises" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bonus exercises</h1>
 
 <ul>
-<li>[ ] Use the geolocation API to display weather based on the user's current location</li>
-<li>[ ] Provide settings to toggle between Fahrenheit and Celsius</li>
-<li>[ ] Add some animations</li>
+<li>Use the geolocation API to display weather based on the user's current location</li>
+<li>Provide settings to toggle between Fahrenheit and Celsius</li>
+<li>Add some animations</li>
 </ul>
+        </section>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/bonniee/strangeloop-workshop">Strangeloop React Native Workshop</a> is maintained by <a href="https://github.com/bonniee">bonniee</a>.</span>
+        <footer>
+          React Native Workshop is maintained by <a href="https://github.com/bonniee">bonniee</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
+        
+      </div>
+    </div>
   </body>
 </html>
