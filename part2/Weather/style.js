@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     height: 36,
-    width: 100,
+    width: 112,
     fontSize: 36,
     borderColor: '#FFFFFF',
     alignItems: 'center',

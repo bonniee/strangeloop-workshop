@@ -5,17 +5,28 @@ import {
   Text,
   TextInput,
   View,
+  AsyncStorage,
   Image
 } from 'react-native';
 
 import styles from './style';
 
 const API_KEY = 'bbeb34ebf60ad50f7893e7440a1e2b0b';
+const STORAGE_KEY = 'storedZipCode'
 
 class Weather extends Component {
   constructor(props) {
     super(props);
     this.state = { zipCode: 10001 };
+
+    AsyncStorage.getItem(STORAGE_KEY)
+      .then((value) => {
+        if (value !== null) {
+          this.state = { zipCode: value }
+        }
+      })
+      .catch((error) => console.log('AsyncStorage error: ' + error.message))
+      .done();
   }
 
   componentDidMount() {
@@ -25,6 +36,11 @@ class Weather extends Component {
   _handleTextChange = (event) => {
     var zipCode = event.nativeEvent.text
     this._fetchWeather(zipCode);
+
+    AsyncStorage.setItem(STORAGE_KEY, zipCode)
+      .then(() => console.log('Saved selection to disk: ' + zipCode))
+      .catch((error) => console.log('AsyncStorage error: ' + error.message))
+      .done();
   }
 
   _fetchWeather = (zipCode) => {
